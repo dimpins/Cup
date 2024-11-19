@@ -66,8 +66,7 @@ public class Main {
             }
 
             if(!isAdded){                                    //если не вставилось до, то невозможно
-                System.out.println("Невозможно");
-                return;
+                break;
             }
         }
 
