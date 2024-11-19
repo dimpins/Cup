@@ -65,21 +65,13 @@ public class Main {
                 }
             }
 
-            if(!isAdded){                                    //если не вставилось до, то невозможно
-                break;
+            if(!isAdded){                                    //если не вставилось до, то вставляем в конец
+                duoSort.add(duo.getFirst());
+                duo.removeFirst();
             }
         }
 
         System.out.println(duoSort);
     }
 
-    public static int factorial(int n) {
-        int result = 1;
-
-        for(int i = 1; i <= n; i++) {
-            result *= i;
-        }
-
-        return result;
-    }
 }
