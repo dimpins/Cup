@@ -5,21 +5,21 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();                        //вводим кол-во человек
-
+        sc.nextLine();
         if(n == 1){
             System.out.println("Нет пар, когда 1 человек");
             return;
         }
 
-        ArrayList<Integer> list = new ArrayList<>();
+        ArrayList<String> listName = new ArrayList<>();
         for (int i = 0; i < n; i++) {
-            list.add(sc.nextInt());               //заполняем их
+            listName.add(sc.nextLine());               //заполняем их
         }
 
         ArrayList<Duo> duo = new ArrayList<>();          //лист пар для хранения всех
         for (int i = 0; i < n - 1; i++) {
             for(int j = i+1; j < n; j++) {
-                duo.add(new Duo(list.get(i), list.get(j)));            //добавляем пару
+                duo.add(new Duo(i, j, listName.get(i), listName.get(j)));            //добавляем пару
             }
         }
 
